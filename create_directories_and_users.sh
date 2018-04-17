@@ -8,6 +8,6 @@ set -eux
 
 BLOG=$1
 
-useradd -G www-data -m -N -p '*' -c "$BLOG deploy user,,," www-$BLOG # deploy user without password
+useradd -g www-data -m -N -p '*' -c "$BLOG deploy user,,," www-$BLOG # deploy user without password
 mkdir /var/www/$BLOG
 chown -R www-$BLOG:www-data /var/www/$BLOG/
